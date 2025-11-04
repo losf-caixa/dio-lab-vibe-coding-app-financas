@@ -21,15 +21,35 @@ Precisamos de uma solução que permita **controlar as finanças por meio de uma
 
 ### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
 
-Antes de pedir à IA para “criar um app”, é essencial **definir claramente o que você quer**. Para isso, use uma versão simplificada de um **PRD (Product Requirements Document)**, um documento que explica o que o produto faz, para quem e por quê.
+Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
 
-**Crie um PRD simples respondendo:**
-1. Qual é o problema que quero resolver?  
-2. Quem vai usar meu app e qual o principal benefício?  
-3. Quais são as 3 a 5 funcionalidades principais?  
-4. O que eu quero que a IA me entregue? (ex.: fluxo de telas, plano de MVP, relatórios etc.)
+Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
 
-Depois, **use o Copilot Web** para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é **refinar o texto até ficar claro, direto e refletir exatamente a sua intenção**.
+```txt
+# Contexto
+Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
+A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
+
+# Problema
+Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
+Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
+
+# Público-Alvo
+Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
+
+# Funcionalidades-Chave
+1. Registrar gastos via chat em linguagem natural.  
+2. Classificar automaticamente as transações.  
+3. Definir e acompanhar metas financeiras.  
+4. Receber dicas de economia do “Agente Financeiro”.  
+5. Visualizar relatórios simples e personalizados.
+
+# Entregável da IA
+Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
+Usar tom educativo e linguagem acessível, em português.
+```
+
+Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
 
 > [!TIP]
 > Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
