@@ -1,6 +1,16 @@
 # 💸 App de Finanças Pessoais com Vibe Coding
 
-# PRD REFINADO 
+# 📚 Bootcamp Caixa, Dio e Microsoft 
+
+## 📌 Descrição da Tarefa Este projeto foi desenvolvido como parte do **Bootcamp da Caixa, Dio e Microsoft**. 
+
+A atividade consistia em: 
+> "Aprenda a criar soluções com IA de forma criativa, guiando ferramentas como o Copilot e o Lovable com uma comunicação simples e natural.
+> O foco é desenvolver o conceito de um App de Organização de Finanças Pessoais, mas, acima de tudo, aprender o jeito Vibe de programar com IA."
+
+---
+
+# PRD Refinado do MVP de App de Finanças Pessoais Conversacional
 
 ```markdown
 # PRD – MVP de App de Finanças Pessoais Conversacional
