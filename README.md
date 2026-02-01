@@ -1,89 +1,132 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+# 💸 App de Finanças Pessoais com Vibe Coding
 
-Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
+# PRD REFINADO 
 
-## ✨ O que é Vibe Coding
+```markdown
+# PRD – MVP de App de Finanças Pessoais Conversacional
 
-**Vibe Coding** é uma forma leve e criativa de desenvolver com IA, baseada em **conversas naturais e bem estruturadas**. Você não precisa escrever código linha por linha. Em vez disso, aprende a **guiar a IA** descrevendo suas ideias de forma clara, com **intenção e contexto**. Em outras palavras:
+## Contexto
+Aplicativo que organiza finanças pessoais de forma prática e natural, usando **conversas** em vez de formulários ou planilhas.
 
-> Você mostra a vibe da sua ideia e a IA transforma em solução (ou em um caminho para ela).
+## Problema
+As pessoas muitas vezes deixam de fazer controle de finanças porque não têm habilidade para lidar com planilhas ou não têm tempo de preencher muitos formulários ou criar fórmulas complexas.  
+O objetivo é oferecer uma experiência simples, personalizada e motivadora sem travar o fluxo inicial.
 
-## 🎯 Desafio
+## Público-Alvo
+- Pessoas iniciantes no controle financeiro.  
+- Usuários que querem praticidade e não têm experiência com planilhas ou apps complexos.  
 
-Problema: Muitas pessoas não conseguem manter um controle financeiro porque os aplicativos exigem muita entrada de dados manual, e a criação de orçamentos é vista como algo tedioso. 
+---
 
-Precisamos de uma solução que permita **controlar as finanças por meio de uma conversa simples**, com **agentes de IA** capazes de criar **planos de economia personalizados e automatizados**. Você deve utilizar as ideias de **Vibe Coding** e **MVP (Produto Mínimo Viável)** para desenvolver o **conceito de um aplicativo** que resolva o problema citado.
+## Funcionalidades-Chave do MVP
 
-> [!IMPORTANT]
-> Você **não precisa construir o código**! O foco está em **usar a IA como sua parceira criativa**, transformando boas ideias e prompts em conceitos funcionais que simulam um produto real.
+### Tela Inicial (Login)
+- Exibe login e informações sobre as facilidades de fazer a gestão financeira pelo aplicativo e o slogan "Disciplina é liberdade".  
+- Deve conter uma **imagem muito realista, de uma mulher morena, de cabelos ondulados e longos, com cachos nas pontas, sentada em posição de meditação relaxada e sorrindo em algum local ao ar livre**, com **imagens de sonhos e planos realizados ao fundo** (ex.: a mulher em uma casa moderna, a mulher praticando atividade física, a mulher em uma praia com amigas, a mulher com roupa de executiva em um trabalho), transmitindo a ideia de que ela está no controle da sua vida e tem tempo para usufruir de outras coisas.  
+- Após login, leva à **Tela Principal**.
 
-## 🪄 Etapas do Desafio
+### Tela Principal
+- Mostra receitas e despesas que impactam o mês corrente.  
+- **Chat do Assistente Financeiro** (canto inferior esquerdo): registrar gastos e receitas por conversa.  
+  - Quando o usuário informar uma despesa parcelada (ex.: curso de inglês em 10 parcelas de R$ 200):  
+    - O app deve perguntar **qual a forma de pagamento**.  
+    - Se for **débito em conta, PIX ou boleto** → perguntar **qual conta será usada**.  
+    - Se for **cartão de crédito** → perguntar **qual cartão foi usado**.  
+    - O aplicativo deve **prever automaticamente as parcelas para os meses seguintes**, conforme o meio de pagamento informado.  
+- **Quadro lateral de desempenho** (direita):  
+  - Barras de progresso mostrando percentuais entre realizado e esperado para cada categoria de despesa e metas cadastradas.  
+  - Se não houver metas ou expectativas de gastos cadastradas, exibe mensagem:  
+    *“É importante cadastrar expectativas de gastos e metas para uma boa gestão financeira.”*  
+- **Botões principais** (localizados juntos):  
+  - **Relatórios e Extratos**: leva à tela de relatórios.  
+  - **Manutenção**: leva à tela de manutenção, onde o usuário pode cadastrar contas, cartões, categorias, despesas/receitas fixas e metas.  
+  - **Compartilhar Gestão Financeira**: permite compartilhar o controle financeiro com terceiros via e-mail, com diferentes níveis de acesso.  
 
-### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
+### Tela Manutenção
+Acessível apenas por botão na Tela Principal. Permite cadastrar e editar:  
+1. **Contas**: apenas campo para nome da conta.  
+2. **Cartões de crédito**: nome do cartão, data de vencimento da fatura, data de virada da fatura.  
+3. **Categorias de despesas e receitas**:  
+   - Campo para informar se é **Despesa** ou **Receita**.  
+   - Campo para informar o **nome da categoria**.  
+   - Campo para informar a **expectativa de valor** a ser gasto ou recebido naquele mês.  
+   - Campo para abrir e cadastrar **subcategorias** relacionadas àquela categoria (ex.: Categoria “Filho João” → Subcategorias “Educação”, “Transporte”).  
+4. **Despesas/Receitas Fixas**:  
+   - Campo para informar se é **Despesa** ou **Receita**.  
+   - Campo para informar o **valor**.  
+   - Campo para informar a **data de vencimento ou recebimento**.  
+   - Campo para informar em **quantas vezes** ainda será paga ou recebida, ou se é por **tempo indeterminado**.  
+   - O aplicativo deve prever automaticamente esse gasto ou receita para os próximos meses conforme a quantidade de vezes informada, ou replicar indefinidamente até que o usuário ajuste como finalizada.  
+5. **Metas financeiras**: valores a serem guardados para objetivos específicos.  
 
-Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
+### Tela de Relatórios e Extratos
+- Exibe gráficos e relatórios de todas as despesas e receitas do mês corrente.  
+- Caixa de seleção para visualizar outros meses.  
+- Opção de exportar relatórios em **PDF, Excel e formatos comuns**.  
 
-Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
+### Compartilhamento de Controle Financeiro
+- Usuário pode compartilhar acesso com terceiros via e-mail.  
+- Tipos de acesso:  
+  - **Consulta + Relatórios**.  
+  - **Consulta + Edição/Manutenção + Relatórios**.  
 
-```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
+---
 
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
+## Validação Inicial
+- Testar se usuários conseguem usar o chat para registrar transações parceladas com diferentes meios de pagamento.  
+- Verificar se entendem a função da **Tela Manutenção** para cadastrar dados.  
+- Avaliar clareza das barras de desempenho e relatórios.  
+- Métrica básica: quantos usuários completam cadastro de pelo menos uma conta/cartão e registram transações na primeira semana.  
 
-# Público-Alvo
-Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
-
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
-
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
 ```
 
-Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
+# INTERAÇÕES COM O LOVABLE
 
-> [!TIP]
-> Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
+> /create-prd # PRD – MVP de App de Finanças Pessoais Conversacional
 
-### 2. Explorando o Lovable na Prática
+> Na TELA MANUTENÇÃO, na parte de despesas e receitas fixas, acrescentar campo referente à conta ou cartão em que a despesa ou receita é gerada, para que a ferramenta insira no controle de contas e cartões. Nos relatórios e extratos deve ter opção de gerar relatório por tipo de conta ou de cartão e por período, podendo ser selecionado mais de um tipo de conta ou de cartão ou de um período (substituir a lista por marcadores que podem ser selecionados ou não). No assistente financeiro, se a conta ou cartão de pagamento ou de recebimento não estiver cadastrada, ele deve perguntar se o usuário deseja cadastrar e perguntar os mesmos dados que existem nos campos da tela manutenção, salvando a nova conta ou cartão. O nome do aplicativo deve ser alterado para LibertA. (//ele havia alterado o nome para FinanZen).
 
-Com seu PRD pronto e revisado, é hora de colocar a IA em ação. Abra o Lovable, cole seu prompt completo e peça o plano inicial do MVP do seu aplicativo. Como o plano gratuito limita você a 5 interações por dia, seja estratégico:
-- Faça perguntas diretas e construtivas, como “crie o fluxo de telas com base nas funcionalidades listadas” ou “gere uma versão resumida do plano de MVP”;
-- Priorize clareza nas instruções para aproveitar ao máximo cada resposta;
+> Na parte do relatório, ao mudar o filtro, ele não está atualizando os relatórios. Inserir um botão para atualizar os relatórios em frente ao nome "Filtros de relatório", para que o relatório seja atualizado com os filtros que foram selecionados. E um botão "Limpar filtros". Se nenhum filtro tiver selecionado, os relatórios considerarão como se todos estivesse selecionados.
 
-Durante essa etapa, você pode orientar a IA para três entregas principais:
-1. Agente Financeiro: defina o comportamento e o tom de voz de um consultor financeiro pessoal, alinhado ao público e objetivo do app.
-2. Fluxo de Telas: peça à IA para gerar o fluxo conceitual de telas com base nas funcionalidades descritas no PRD, simulando a interação por conversa.
-3. Plano de MVP: solicite um resumo das 5 funcionalidades principais, dos recursos necessários e um plano de validação inicial (como medir se o app cumpre seu propósito).
+> Inclua a opção de "Editar" as contas, cartões, categorias, fixos e metas, para que não seja necessário excluir e reincluir.
 
-> [!TIP]
-> Se preferir, você pode fazer tudo com o **Copilot**. O importante é exercitar a habilidade de transformar intenções em instruções claras e testar os limites da IA como parceira criativa.
+> Quanto à expectativa de gastos e de receitas, é importante saber que é a expectativa mensal. Na tela inicial, deve ser considerada a expectativa x realidade do mês em curso ou do mês que foi selecionado no filtro. Na parte superior da tela inicial, onde está sendo exibido o mês e ano, deve ser exibido filtro para escolher qualquer mês e ano, para avaliar o desempenho. Outro erro que está acontecendo é que quando alteramos qualquer coisa na tela de manutenção ele não salva definitivamente. Depois que saímos e entramos de novo na tela, ele volta para os parâmetros iniciais, e não salva as alterações. Qualquer informações que for inserida na tela principal, no assistente ou na tela de manutenção deve atualizar todas as telas da ferramenta, todas as informações devem ser compartilháveis entre todas as telas: manutenção, relatórios e tela principal. Quanto aos filtros do relatório, mudar a concepção: só exibir as informações para as opções que estiverem marcadas. Ao clicar em limpar filtros, ele deve voltar para a marcação padrão, que é marcar todos os campos.
 
-### 3. Entregando o Desafio na DIO
+Resultado final no Lovable: https://libertapp.lovable.app/
 
-Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
-No README do seu repositório, inclua:
+# RESUMO DAS FUNCIONALIDADES DO APP
 
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
+O app de gestão financeira permite a inclusão de receitas e despesas de forma automática por interação de texto ou voz com um chat. 
 
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
+Ele possui uma tela de login com uma imagem que remete à tranquilidade de estar no controle das finanças pessoais e algumas referências ao que o aplicativo faz:
 
-## 💬 Conclusão
+<img width="1900" height="876" alt="image" src="https://github.com/user-attachments/assets/e10c3ee1-1fdb-468d-9954-4f08994e70ea" />
 
-Vibe Coding é sobre clareza, curiosidade e criatividade, não sobre perfeição técnica. O verdadeiro objetivo aqui é aprender a pensar junto com a IA, transformando ideias em conceitos reais e enxergando a tecnologia como uma extensão do seu raciocínio criativo. Cada interação é um experimento, quanto mais clara for sua intenção, mais surpreendente será o resultado.
+Após o login, há uma uma tela principal onde está o chat assistente e onde são exibidas as informações principais de receitas e despesas e um monitor de gastos, receitas e metas previstas x realizadas para o mês corrente ou para outro mês de escolha do usuário, conforme filtro na parte superior, bem como três botões para telas acessórias:
+
+<img width="1183" height="858" alt="image" src="https://github.com/user-attachments/assets/6562538d-9604-44d5-9d0e-d0950473e703" />
+Nesta tela é necessário aprimorar as soluções e respostas para algumas perguntas do Chat Assistente, pois nem sempre ele sabe o que fazer e não dá uma solução adequada.
+
+Na Tela Manutenção é possível parametrizar as contas, cartões, despesas e receitas fixas, categorias de receitas e despesas, com subcategorias e previsão de despesas ou gastos em cada categoria, e metas com valores e prazos, conforme a realidade do usuário:
+
+<img width="1041" height="472" alt="image" src="https://github.com/user-attachments/assets/a82b97bc-aeb1-48a4-899a-b1a0b8bb3b89" />
+
+Na Tela Relatórios e Extratos há gráficos e relatórios de acompanhamento com filtros personalizáveis por contas, cartões e períodos:
+
+<img width="893" height="865" alt="image" src="https://github.com/user-attachments/assets/b5a4b249-e4d8-4ebb-a7b7-89003847f3b1" />
+
+Necessário aprimoramento da parte do extrato para possibilitar a edição ou exclusão de receitas ou despesas lançadas, e também a parte dos filtros.
+
+Na Tela de Compartilhamento deveria ser possível compartilhar o aplicativo com terceiros, que podem ter acesso somente de consulta ou acesso de colaboração, para inclusão de informações, manutenção e emissão de relatórios. Todavia não funcionou, sendo necessários ajustes no Lovable.
+
+# REFLEXÃO SOBRE O PROCESSO
+
+## O que funcionou bem? 
+O Lovable entendeu bem a ideia e criou as telas conforme solicitado, mas foi fundamental ter refinado antes no Copilot, pois o Lovable possui muito poucos créditos.
+
+## O que não funcionou como o esperado? 
+Alguns detalhes precisarem ser bem melhor explicados para que e fossem aprimorados, de modo que compreendi que a especificação precisa ser muito bem detalhada e refinada várias vezes até obter o resultado esperado.
+
+## O que aprendeu sobre conversar com IAs? 
+É necessário especificar com muitos detalhes e que é necessário testar e refinar muitas vezes até ser possível obter o resultado desejado.
+
