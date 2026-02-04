@@ -102,7 +102,7 @@ Acessível apenas por botão na Tela Principal. Permite cadastrar e editar:
 
 > Quanto à expectativa de gastos e de receitas, é importante saber que é a expectativa mensal. Na tela inicial, deve ser considerada a expectativa x realidade do mês em curso ou do mês que foi selecionado no filtro. Na parte superior da tela inicial, onde está sendo exibido o mês e ano, deve ser exibido filtro para escolher qualquer mês e ano, para avaliar o desempenho. Outro erro que está acontecendo é que quando alteramos qualquer coisa na tela de manutenção ele não salva definitivamente. Depois que saímos e entramos de novo na tela, ele volta para os parâmetros iniciais, e não salva as alterações. Qualquer informações que for inserida na tela principal, no assistente ou na tela de manutenção deve atualizar todas as telas da ferramenta, todas as informações devem ser compartilháveis entre todas as telas: manutenção, relatórios e tela principal. Quanto aos filtros do relatório, mudar a concepção: só exibir as informações para as opções que estiverem marcadas. Ao clicar em limpar filtros, ele deve voltar para a marcação padrão, que é marcar todos os campos.
 
-Resultado final no Lovable: https://libertapp.lovable.app/
+Resultado final no Lovable: [https://liberta-app-v0.lovable.app]
 
 # RESUMO DAS FUNCIONALIDADES DO APP
 
